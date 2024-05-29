@@ -7,12 +7,15 @@ function fibonacci(num) {
 	else if(num == 2){
 		return t2;
 	}
-	for(let i = 2; i < num; i++){
-		t3 = t1 + t2;
-		t1 = t2;
-		t2 = t3;
+		
+	else {
+		for(let i = 2; i < num; i++){
+			t3 = t1 + t2;
+			t1 = t2;
+			t2 = t3;
+		}
+		return t3;
 	}
-	return t3;
 }
 
 module.exports = fibonacci;
